@@ -20,6 +20,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import org.jclouds.blobstore.domain.Tier;
 
+import com.google.common.annotations.Beta;
 import com.google.common.base.CaseFormat;
 
 public final class DomainResourceReferences {
@@ -59,7 +60,13 @@ public final class DomainResourceReferences {
       EUROPE_WEST3,
       EUROPE_WEST4,
 
-      AUSTRALIA_SOUTHEAST1;
+      AUSTRALIA_SOUTHEAST1,
+
+      /*
+       *  Alpha locations
+       */
+      @Beta
+      US_CENTRAL2;
 
       public String value() {
          return name().replace('_', '-');
